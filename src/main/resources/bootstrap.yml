@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: service01
+
+management:
+  security:
+    enabled: false
+endpoints:
+  hypermedia:
+    enabled: true
+  restart:
+    enabled: true
+  refresh:
+    enabled: true
+  health:
+    sensitive: false
