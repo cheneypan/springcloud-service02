@@ -29,7 +29,7 @@ public class IndexController {
         if (null == name || name.trim().equals("")) {
             return String.format("[%s]the name is null", df.format(new Date()));
         }
-        String reply = String.format("reply from service01: {}", service01Client.reply(name));
+        String reply = String.format("reply from service01: %s", service01Client.reply(name));
         logger.info("name = {}, service01 reploy: {}", name, reply);
         return reply;
     }
