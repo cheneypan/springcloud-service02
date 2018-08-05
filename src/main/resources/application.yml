@@ -29,8 +29,9 @@ eureka:
     service-url:
       defaultZone: http://${discovery:localhost}:6001/eureka/
   instance:
+    # k8s 中的service name 与 spring.application.name 一致才可正常访问
+    # 在本地需配置各spring.application.name的hosts
     hostname: ${spring.application.name}
-#    hostname: ${ServiceAddress:localhost}
 
 security:
   basic:
