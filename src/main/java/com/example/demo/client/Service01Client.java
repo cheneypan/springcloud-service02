@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.*;
 /**
  * Created by cheney on 2018/8/5.
  */
-@FeignClient(serviceId = "service01", fallbackFactory = Service01Client.Service01ClientFallback.class)
+@FeignClient(serviceId = "service01", fallback = Service01Client.Service01ClientFallback.class)
 public interface Service01Client {
 
     @RequestMapping(value="/reply",method = RequestMethod.GET)
