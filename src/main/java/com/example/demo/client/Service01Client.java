@@ -3,6 +3,7 @@ package com.example.demo.client;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.cloud.netflix.feign.FeignClient;
+import org.springframework.stereotype.Component;
 import org.springframework.web.bind.annotation.*;
 
 /**
@@ -14,6 +15,7 @@ public interface Service01Client {
     @RequestMapping(value="/reply",method = RequestMethod.GET)
     String reply(@RequestParam("message") String message);
 
+    @Component
     class Service01ClientFallback implements Service01Client {
 
         private Logger logger = LoggerFactory.getLogger(getClass());
